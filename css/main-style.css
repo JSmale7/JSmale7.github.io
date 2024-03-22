@@ -2,46 +2,137 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    'head head head'
-    'nav nav nav'
-    'program resume video'
+    'sum name nav'
+    'greet greet greet'
+    'content content content'
     'footer footer footer';
-    background-color: #005F73;
+    background-color: black;
+    font-family: sans-serif;
 }
 
-.page-title {
-    grid-area: head;
+/**
+PAGE TOP
+**/
+
+#name {
+    grid-area: name;
+    color: #A3CEF1;
+    display: flex;
+    justify-content: space-around;
 }
 
-.navigation {
+#personal-summary{
+    grid-area: sum;
+    color: #8B8C89;
+    display: flex;
+    justify-content: space-around;
+}
+
+body > nav {
     grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
 }
 
-#program {
-    grid-area: program;
+.top-nav:hover {
+    color: yellow;
+}
+
+.top-nav {
+    color: #6096BA;
+}
+
+/**
+PAGE ENTRY
+**/
+
+body > div.entry {
+    grid-area: greet;
+    color: aquamarine;
+}
+
+/**
+PAGE CONTENTS
+**/
+
+.contents {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'resume resume'
+    'program video';
+}
+
+.section-head {
+    color: #8B8C89;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: #6096BA;
 }
 
 #resume {
     grid-area: resume;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'resume-title'
+    'resume-des'
+    'resume-link';
+}
+
+#res-title {
+    grid-area: resume-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#res-body {
+    grid-area: resume-des;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#res-link {
+    grid-area: resume-link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#program {
+    grid-area: program;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'program-title'
+    'program-des'
+    'program-link';
 }
 
 #video {
     grid-area: video;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'video-title'
+    'video-des'
+    'video-link';
 }
+
+/**
+PAGE FOOTER
+**/
 
 .foot {
     grid-area: footer;
-    color: #0A9396;
+    color: #274C77;
 }
 
-#name {
-    color: #EE9B00;
-}
-
-#personal-summary{
-    color: #E9D8A6;
-}
-
-p {
-    color: #94D2BD;
-}
