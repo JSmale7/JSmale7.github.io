@@ -3,12 +3,17 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     'head head head'
+    'nav nav nav'
     'program resume video'
     'footer footer footer';
 }
 
 .page-title {
     grid-area: head;
+}
+
+.navigation {
+    grid-area: nav;
 }
 
 #program {
