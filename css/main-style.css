@@ -6,6 +6,7 @@ body {
     'nav nav nav'
     'program resume video'
     'footer footer footer';
+    background-color: #005F73;
 }
 
 .page-title {
@@ -30,4 +31,17 @@ body {
 
 .foot {
     grid-area: footer;
+    color: #0A9396;
+}
+
+#name {
+    color: #EE9B00;
+}
+
+#personal-summary{
+    color: #E9D8A6;
+}
+
+p {
+    color: #94D2BD;
 }
