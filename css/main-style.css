@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'head head head'
+    'program resume video'
+    'footer footer footer';
+}
+
+.page-title {
+    grid-area: head;
+}
+
+#program {
+    grid-area: program;
+}
+
+#resume {
+    grid-area: resume;
+}
+
+#video {
+    grid-area: video;
+}
+
+.foot {
+    grid-area: footer;
+}
