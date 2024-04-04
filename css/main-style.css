@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'josefin';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -6,7 +11,7 @@ body {
     'content content '
     'footer footer ';
     background-color: black;
-    font-family: sans-serif;
+    font-family: josefin;
 }
 
 /**
@@ -71,10 +76,10 @@ p {
 #resume {
     grid-area: resume;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    'resume-title'
-    'resume-des';
+    'resume-title resume-title'
+    'resume-pic resume-des';
 }
 
 #res-title {
@@ -91,11 +96,12 @@ p {
     align-items: center;
 }
 
-#res-link {
-    grid-area: resume-link;
+#resume-photo {
+    grid-area: resume-pic;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 30vh;
 }
 
 #program {
@@ -108,6 +114,20 @@ p {
     margin: 50px;
 }
 
+#prog-title {
+    grid-area: program-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prog-body {
+    grid-area: program-des;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #video {
     grid-area: video;
     display: grid;
@@ -116,6 +136,20 @@ p {
     'video-title'
     'video-des';
     margin: 50px;
+}
+
+#video-title {
+    grid-area: video-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-body {
+    grid-area: video-des;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /**

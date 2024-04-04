@@ -1,18 +1,27 @@
+@font-face {
+    font-family: 'josefin';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    'sum name nav'
-    'greet greet greet'
+    'header header header'
+    'nav nav nav'
     'content content content'
     'footer footer footer';
     background-color: black;
-    font-family: sans-serif;
+    font-family: josefin;
 }
 
-/**
-PAGE TOP
-**/
+.page-title {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'name sum';
+}
 
 #name {
     grid-area: name;
@@ -21,120 +30,57 @@ PAGE TOP
     justify-content: space-around;
 }
 
-#personal-summary{
+header > #personal-summary{
     grid-area: sum;
     color: #68B684;
     display: flex;
     justify-content: space-around;
 }
 
-body > nav {
+nav {
     grid-area: nav;
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.top-nav:hover {
-    color: #C3F73A;
-}
-
-.top-nav {
-    color: #95E06C;
-}
-
-/**
-PAGE ENTRY
-**/
-
-body > div.entry {
-    grid-area: greet;
-    color: aquamarine;
-}
 
 /**
 PAGE CONTENTS
 **/
-
 .contents {
     grid-area: content;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    'resume resume'
-    'program video';
-}
-
-.section-head {
-    color: #3068A0;
-    display: flex;
-    justify-content: center;
-}
-
-p {
-    color: #608CB9;
-}
-
-#resume {
-    grid-area: resume;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    'resume-title'
-    'resume-des'
-    'resume-link';
-}
-
-#res-title {
-    grid-area: resume-title;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#res-body {
-    grid-area: resume-des;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#res-link {
-    grid-area: resume-link;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#program {
-    grid-area: program;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    'program-title'
-    'program-des'
-    'program-link';
-    margin: 50px;
-}
-
-#video {
-    grid-area: video;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    'video-title'
-    'video-des'
-    'video-link';
-    margin: 50px;
+    'intro intro intro';
 }
 
 /**
-PAGE FOOTER
+FOOT
 **/
 
 .foot {
     grid-area: footer;
     color: #3068A0;
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+}
+
+
+/** 
+COMPONENTS
+**/
+
+a:hover {
+    color: #C3F73A;
+}
+
+a {
+    color: #95E06C;
+}
+
+p {
+    color: #608CB9;
 }
 

@@ -1,21 +1,26 @@
+@font-face {
+    font-family: 'josefin';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    'header header header'
-    'nav nav nav'
-    'content content content'
-    'footer footer footer';
+    grid-template-areas:
+        'header header header'
+        'nav nav nav'
+        'content content content'
+        'footer footer footer';
     background-color: black;
-    font-family: sans-serif;
+    font-family: josefin;
 }
 
 .page-title {
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    'name sum';
+    grid-template-areas:
+        'name sum';
 }
 
 #name {
@@ -25,7 +30,7 @@ body {
     justify-content: space-around;
 }
 
-header > #personal-summary{
+header>#personal-summary {
     grid-area: sum;
     color: #68B684;
     display: flex;
@@ -41,11 +46,12 @@ nav {
 .resume {
     grid-area: content;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    'me me me'
-    'skill exp exp'
-    'job job ed';
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'me  me'
+        'job  skill'
+        'job  exp'
+        'ed  ed';
 }
 
 .about-me {
@@ -64,6 +70,33 @@ nav {
     grid-area: job;
 }
 
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    /* You can adjust this */
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
 .education {
     grid-area: ed;
 }
@@ -72,10 +105,13 @@ a:hover {
     color: #C3F73A;
 }
 
+
+/**
+Types
+**/
 a {
     color: #95E06C;
 }
-
 
 .section-heading {
     color: #3068A0;
@@ -97,6 +133,10 @@ h5 {
     color: #608CB9;
 }
 
+
+/**
+Foot
+**/
 
 .foot {
     grid-area: footer;

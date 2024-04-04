@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'josefin';
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -7,7 +12,7 @@ body {
     'content content content'
     'footer footer footer';
     background-color: black;
-    font-family: sans-serif;
+    font-family: josefin;
 }
 
 .page-title {
