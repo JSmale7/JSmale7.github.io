@@ -1,10 +1,11 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    'header header '
-    'content content '
-    'footer footer ';
+    'sum name nav'
+    'greet greet greet'
+    'content content content'
+    'footer footer footer';
     background-color: black;
     font-family: sans-serif;
 }
@@ -13,14 +14,6 @@ body {
 PAGE TOP
 **/
 
-.page-title {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    'name sum';
-}
-
 #name {
     grid-area: name;
     color: #68B684;
@@ -28,22 +21,37 @@ PAGE TOP
     justify-content: space-around;
 }
 
-header > #personal-summary{
+#personal-summary{
     grid-area: sum;
     color: #68B684;
     display: flex;
     justify-content: space-around;
 }
 
+body > nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
 
-a:hover {
+.top-nav:hover {
     color: #C3F73A;
 }
 
-a {
+.top-nav {
     color: #95E06C;
 }
 
+/**
+PAGE ENTRY
+**/
+
+body > div.entry {
+    grid-area: greet;
+    color: aquamarine;
+}
 
 /**
 PAGE CONTENTS
@@ -74,7 +82,8 @@ p {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'resume-title'
-    'resume-des';
+    'resume-des'
+    'resume-link';
 }
 
 #res-title {
@@ -104,7 +113,8 @@ p {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'program-title'
-    'program-des';
+    'program-des'
+    'program-link';
     margin: 50px;
 }
 
@@ -114,7 +124,8 @@ p {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'video-title'
-    'video-des';
+    'video-des'
+    'video-link';
     margin: 50px;
 }
 
@@ -125,8 +136,5 @@ PAGE FOOTER
 .foot {
     grid-area: footer;
     color: #3068A0;
-    display: flex;
-    justify-content: end;
-    margin-top: 50px;
 }
 
